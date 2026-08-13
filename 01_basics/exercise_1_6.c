@@ -2,15 +2,15 @@
 
 int main(){
     int c, i, nwhite, nother;
-    int ndigit[10];
+    int ndigit[10]; // create an array of 10 counters for each number from 0 to 9
     
     nwhite = nother = 0;
     for (i = 0; i < 10; ++i)
-        ndigit[i] = 0;
+        ndigit[i] = 0; // initialize all counters to zero (0 through 9 = 0)
     
     while ((c = getchar()) != EOF) {
-        if (c >= '0' && c <= '9')
-            ++ndigit[c - '0'];
+        if (c >= '0' && c <= '9') 
+            ++ndigit[c - '0']; // Incrementing the appropriate counter using a standard C technique: the ASCII value for '0' is 48, so '5' is 53; thus, 53 - 48 = 5.
         else if (c == ' ' || c == '\n' || c == '\t')
             ++nwhite;
         else
