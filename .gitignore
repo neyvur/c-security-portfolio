@@ -9,3 +9,14 @@
 # ignoring binary code (for example, exercise_1_5_2) only the end of the file
 /exercise_*
 
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Скомпилированные бинарники (без расширения)
+01_basics/exercise_1_5_3
+01_basics/exercise_1_6
+01_basics/exercise_1_7
+
