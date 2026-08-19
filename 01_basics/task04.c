@@ -10,8 +10,9 @@ void set_age_by_value(struct Student s, int new_age){
     s.age = new_age;
 }
 // example by pointers
-void set_age_by_pointers(struct Student *s, int new_age){
+void set_age_by_pointers(struct Student *s, int new_age, const char *new_name){
     s->age = new_age;
+    strcpy(s->name, new_name);//
 }
 
 int main(){
@@ -26,7 +27,7 @@ int main(){
     printf("after by value: %s, %d\n", student1.name, student1.age);
 
     // by pointers
-    set_age_by_pointers(&student1, 25);
+    set_age_by_pointers(&student1, 25, "Abu");
     printf("after by pointer: %s, %d\n", student1.name, student1.age);
 
     return 0;
